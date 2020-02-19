@@ -1,6 +1,24 @@
 # Practical Assignment 1
-Please put your name (or names if you work in a group) here:  
-**Name**: .......
+Please put your name (or names if you work in a group) here:   
+**Name**: Osama Al-Wardi
+## Python3 opencv setup
+You need a standard python3 setup. You obviously need python3 and pip3 installed.
+
+After that you need numpy:
+'''
+sudo pip3 install numpy
+'''
+and opencv
+'''
+pip3 install opencv-python
+'''
+## Running the code
+Just run this command:
+'''
+python3 face_detection.py
+'''
+## Results:
+After running the code you can see the normal camera stream and the fps on the terminal output. Then press q and you will have the face detection algorithm running and the fps on the terminal output. If you have any questions write me on o.alwardi@jacobs-university.de
 ## Problem 1.1
 ### Calculate Frames-per-Second (FPS) (Points 30)
 1. Fork the current repository
