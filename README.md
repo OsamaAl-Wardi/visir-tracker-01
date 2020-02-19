@@ -18,7 +18,7 @@ Just run this command:
 python3 face_detection.py
 ```
 ## Results:
-After running the code you can see the normal camera stream and the fps on the terminal output. Then press q and you will have the face detection algorithm running and the fps on the terminal output. If you have any questions write me on o.alwardi@jacobs-university.de
+After running the code you can see the normal camera stream and the fps on the terminal output. Then press q and you will have the face detection algorithm running and the fps on the terminal output. If you have any questions write me on o.alwardi@jacobs-university.de **Please Note** this code is written and tested on an Ubuntu 18.04 operating system. If you're running windows the code might not work due the paths using '\' instead of '/'. Let me know if you get problems with that.
 ## Problem 1.1
 ### Calculate Frames-per-Second (FPS) (Points 30)
 1. Fork the current repository
