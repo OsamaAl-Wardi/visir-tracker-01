@@ -40,8 +40,6 @@ def detectAndDisplay(frame):
 def normal_stream():
     cap = cv2.VideoCapture(0)  
     frames = 0
-    t = time.process_time()
-    seconds = 1
     # Start time measurement
     start = time.time()
     while(True):
@@ -52,18 +50,19 @@ def normal_stream():
         # End time measurement
         end = time.time()
         elapsed_time = end - start
-        
-        if elapsed_time > seconds:
-            print ("Time taken : {0} seconds".format(seconds))
+        if elapsed_time >= 1:
+            #print ("Time taken : {0} seconds".format(seconds))
             # Measuring the frames per second
-            fps  = frames / seconds
-            print ("Estimated frames per second : {0}".format(fps))
-            seconds += 1
-
+            #fps  = frames / seconds
+            print (frames, "fps")
+            #print ("Estimated frames per second : {0}".format(fps))
+            frames = 0
+            start = end
+        
         # Exiting the window
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
-
+        
     cap.release()
     cv2.destroyAllWindows()
     
@@ -71,7 +70,6 @@ def normal_stream():
 def face_detection_stream():
     cap = cv2.VideoCapture(0)
     frames = 0
-    seconds = 1
     # Start the time measurement
     start = time.time()
     while(True):
@@ -82,12 +80,14 @@ def face_detection_stream():
         # End the time measurement
         end = time.time()
         elapsed_time = end - start
-        if elapsed_time > seconds:
-            print ("Time taken : {0} seconds".format(seconds))
+        if elapsed_time >= 1:
+            #print ("Time taken : {0} seconds".format(seconds))
             # Compute the frames per second
-            fps  = frames / seconds
-            print ("Estimated frames per second : {0}".format(fps))
-            seconds += 1
+            #fps  = frames / seconds
+            #print ("Estimated frames per second : {0}".format(fps))
+            print (frames, "fps")
+            frames = 0
+            start = end
 
         # Press Q to exit the window
         if cv2.waitKey(1) & 0xFF == ord('q'):
