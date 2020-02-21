@@ -11,10 +11,10 @@ eyes_cascade = cv2.CascadeClassifier()
 
 # Loading the cascades
 if not face_cascade.load(cv2.samples.findFile(face_cascade_name)):
-    print('--(!)Error loading face cascade')
+    print('Error loading face cascade')
     exit(0)
 if not eyes_cascade.load(cv2.samples.findFile(eyes_cascade_name)):
-    print('--(!)Error loading eyes cascade')
+    print('Error loading eyes cascade')
     exit(0)
 
 def detectAndDisplay(frame):
@@ -50,12 +50,9 @@ def normal_stream():
         # End time measurement
         end = time.time()
         elapsed_time = end - start
+        # Wait for a second and print the number of frames 
         if elapsed_time >= 1:
-            #print ("Time taken : {0} seconds".format(seconds))
-            # Measuring the frames per second
-            #fps  = frames / seconds
             print (frames, "fps")
-            #print ("Estimated frames per second : {0}".format(fps))
             frames = 0
             start = end
         
@@ -80,11 +77,8 @@ def face_detection_stream():
         # End the time measurement
         end = time.time()
         elapsed_time = end - start
+        # Wait for a second and print the number of frames 
         if elapsed_time >= 1:
-            #print ("Time taken : {0} seconds".format(seconds))
-            # Compute the frames per second
-            #fps  = frames / seconds
-            #print ("Estimated frames per second : {0}".format(fps))
             print (frames, "fps")
             frames = 0
             start = end
