@@ -1,6 +1,6 @@
 # Practical Assignment 1
 Please put your name (or names if you work in a group) here:   
-**Name**: Osama Al-Wardi
+**Name**: Osama Al-Wardi and Melvin Wolf
 ## Python3 opencv setup
 You need a standard python3 setup. You obviously need python3 and pip3 installed.
 
